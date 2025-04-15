@@ -1,0 +1,403 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: url(im2.jpg) center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+
+.header img {
+  width: 250px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  padding: 30px;
+  font-size: 35px;
+  text-align: center;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  background-color: #4caf50;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h2,
+h4 {
+  color: white;
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+label {
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  align-self: center;
+}
+
+/* ========== FILTRES ET RECHERCHE ========== */
+.box-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.box1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerList {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 200px;
+}
+
+.containerList img.fleche,
+img.fleche {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.choix {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+/* ========== FORM INPUTS ========== */
+input,
+select,
+textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 150px;
+  height: 30px;
+}
+
+#ingredients {
+  width: 300px;
+  /* ou plus si nécessaire */
+  max-width: 90%;
+}
+
+.box1 input {
+  align-self: center;
+}
+
+.choix input {
+  margin: 0;
+}
+
+button {
+  border-radius: 10px;
+  color: white;
+  padding: 5px 15px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgb(85, 85, 85);
+  background-color: #ff9800
+}
+
+
+
+button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+/* ========== PRESENTATION ========== */
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.presentation h3 {
+  color: #4caf50;
+  font-size: 30px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.fond {
+  background: url(im5.jpg) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========== CARTES ========== */
+.carte {
+  width: 350px;
+  height: 470px;
+  margin: 20px;
+  perspective: 1000px;
+}
+
+.carte-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.carte:hover .carte-inner {
+  transform: rotateY(180deg);
+}
+
+.carte img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.recto,
+.verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  overflow: auto;
+}
+
+.recto h3,
+.verso h3 {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.verso {
+  transform: rotateY(180deg);
+}
+
+/* ========== CONTACT ========== */
+#contact {
+  background-color: #4caf50;
+  color: white;
+  padding: 40px;
+  text-align: center;
+
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  margin: 10px auto;
+}
+
+/* ========== DETAILS RECETTE ========== */
+#details {
+  display: none;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btnRetour {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 20%;
+  background-color: #ff9800;
+  color: white;
+  padding: 5px 10px;
+}
+
+select {
+  font-size: 14px;
+  padding: 6px 8px;
+  min-height: 30px;
+  line-height: normal;
+  /* ou 1.2 pour un bon équilibre */
+}
+
+.haut,
+.bas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/*-----------------------------------RESPONSIVE--------------------------------------*/
+
+@media screen and (max-width: 370px) {
+  header {
+    display: none;
+  }
+
+  nav {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+      url('im2.jpg') center/cover no-repeat;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  h2,
+  h4 {
+    font-size: 22px;
+    padding: 10px 0;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  #search {
+    border-radius: 10PX;
+    font-size: 18px;
+    padding: 10 10;
+  }
+
+  #contact input,
+  #contact textarea {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .containerList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img.fleche {
+    display: none;
+  }
+/*------------------------------*/
+  .carte {
+    perspective: none;
+    width: 70vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carte-inner {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .carte:active .carte-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .carte img {
+    width: 75px;
+    margin-bottom: 10px;
+  }
+  .carte h3{
+    font-size: 20px;
+  }
+  .carte p{
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  
+  .verso {
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+  
+  }
+
+  .verso p {
+    font-size: 14px;
+    line-height: 1.2;
+
+  }
+
+  .fond {
+    background-image: url(im7.jpg);
+  }
+
+  .fond h3 {
+    color: white;
+  }
+  #listeRecettes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Montserra-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <!--Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Nutrition Health</title>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <div class="header">
+
+            <img src="logo-nutritionHealth.png" alt="logo-nutritionHealth">
+            <h1> Une nutrition seine et équilibrée <br>à portée de main </h1>
+
+        </div>
+
+    </header>
+
+
+    <nav>
+        <div class="nav-content">
+            <h2>Je choisis :</h2>
+
+            <div class="box1">
+
+                <div class="containerList">
+
+                    <img src="fleche.png" alt="fleche" class="fleche">
+
+                    <div class="choix">
+
+                        <label for="categories">Catégorie :</label>
+                        <select id="categories">
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="containerList">
+
+                    <img src="fleche.png" alt="fleche" class="fleche">
+
+                    <div class="choix">
+
+                        <label for="origine">Origine :</label>
+                        <select id="pays">
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <div class="box1">
+
+                <img src="fleche.png" alt="fleche" class="fleche">
+
+                <label for="ingredients"> Ingrédients :</label>
+                <input type="text" id="ingredients" placeholder="Entrez votre ingrédient...">
+
+                <button id="search">Rechercher</button>
+
+
+            </div>
+       
+
+    </nav>
+
+    <!-----------------------------------CONTENUS JS------------------------------------------------>
+
+    <div id="listeRecettes"></div>
+    <div id="details" style="display:none;">
+    </div>
+
+
+    <!-----------------------------------NOS ENGAGEMENTS------------------------------------------>
+    <section class="presentation" style="display: block">
+
+        <h3> Nos engagements </h3>
+
+        <div class="fond">
+
+            <div class="haut">
+                <div class="carte">
+                    <div class="carte-inner">
+                        <div class="recto">
+                            <img src="star-regular.svg" alt="">
+                            <h3>Produits de qualité</h3>
+                        </div>
+
+                        <div class="verso">
+                            <p>Nos produits sont rigoureusement sélectionnés pour garantir une qualité nutritionnelle
+                                optimale
+                                et répondre aux besoins spécifiques de chacun. Élaborés avec des ingrédients naturels et
+                                sans
+                                additifs, ils allient plaisir et bienfaits pour la santé. Nous collaborons avec des
+                                experts
+                                en
+                                nutrition pour formuler des solutions adaptées aux dernières avancées scientifiques.
+                                Chaque
+                                produit est conçu pour vous accompagner vers un mode de vie sain, sans compromis sur le
+                                goût
+                                ni
+                                sur l’efficacité.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carte">
+                    <div class="carte-inner">
+                        <div class="recto">
+                            <img src="user-doctor-solid.svg" alt="">
+                            <h3>Consultations personnalisées</h3>
+                        </div>
+
+                        <div class="verso">
+                            <p>Nos consultations sont entièrement adaptées à votre mode de vie, vos objectifs et vos
+                                besoins
+                                spécifiques. Nos experts en nutrition prennent le temps de comprendre votre alimentation
+                                et
+                                vos
+                                habitudes pour vous proposer un accompagnement sur mesure. Grâce à un suivi régulier,
+                                nous
+                                ajustons votre programme pour maximiser vos résultats et assurer votre bien-être à long
+                                terme.
+                                Notre approche bienveillante et éducative vous aide à adopter de bonnes habitudes
+                                alimentaires
+                                de manière progressive et durable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bas">
+                <div class="carte">
+                    <div class="carte-inner">
+                        <div class="recto">
+                            <img src="apple-whole-solid.svg" alt="">
+                            <h3>Alimentation équilibrée</h3>
+                        </div>
+                        <div class="verso">
+                            <p>Adopter une alimentation équilibrée permet d’apporter à votre corps tous les nutriments
+                                essentiels pour fonctionner de manière optimale. Elle favorise une meilleure digestion,
+                                une
+                                énergie constante et une prévention efficace contre de nombreuses maladies. Une bonne
+                                alimentation contribue également à renforcer le système immunitaire et à améliorer la
+                                qualité du
+                                sommeil. En apprenant à mieux manger, vous gagnez en vitalité et en sérénité au
+                                quotidien.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carte">
+                    <div class="carte-inner">
+                        <div class="recto">
+                            <img src="spa-solid.svg" alt="">
+                            <h3>Bien-être & Santé</h3>
+                        </div>
+                        <div class="verso">
+
+                            <p>Une alimentation saine et adaptée est l’un des piliers fondamentaux du bien-être physique
+                                et
+                                mental. Manger équilibré réduit le stress, améliore l’humeur et favorise une meilleure
+                                concentration. En prenant soin de votre alimentation, vous investissez dans votre santé
+                                sur
+                                le
+                                long terme et prévenez de nombreux troubles métaboliques. Se sentir bien dans son corps
+                                et
+                                dans
+                                son esprit commence par des choix alimentaires pertinents.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+    <!--------------------------FORMULAIRE DE CONTACT---------------------------------->
+    <section id="contact">
+
+        <h4>Contactez-nous</h4>
+
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+
+            <input type="email" placeholder="Votre email" required>
+
+            <textarea placeholder="Votre message" required></textarea>
+            <br>
+            <button class="submit" type="submit">Envoyer</button>
+        </form>
+        
+    </section>
+
+
+
+
+    <script src="recherche.js"></script>
+    <script src="cat.js"></script>
+    <script src="origine.js"></script>
+</body>
+
+</html>
